@@ -2,69 +2,55 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Catchy Fruit | Play Now</title>
+    <title>Catchy Fruit | Play Online</title>
     <style>
-        /* This keeps the cool gaming look you liked */
+        /* This keeps the dark gaming look you liked */
         body {
             background-color: #0b0e14;
             color: #ffffff;
             font-family: 'Segoe UI', Tahoma, sans-serif;
             text-align: center;
-            padding: 100px 20px;
             margin: 0;
-        }
-        .game-card {
-            background: #1a1c23;
-            padding: 50px;
-            border-radius: 30px;
-            border: 3px solid #ff4d6d;
-            display: inline-block;
-            box-shadow: 0 10px 50px rgba(255, 77, 109, 0.3);
+            padding: 20px;
         }
         h1 { 
             color: #ff4d6d; 
-            font-size: 3.5rem; 
-            margin: 0;
-            text-transform: uppercase;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
         }
-        p { 
-            font-size: 1.2rem; 
-            color: #a0a0a0; 
-            margin-bottom: 40px; 
-        }
-        
-        /* The PLAY NOW Button */
-        .play-button {
-            background-color: #ff4d6d;
-            color: white;
-            padding: 22px 60px;
-            font-size: 1.8rem;
-            font-weight: bold;
-            text-decoration: none; /* Removes the underline */
-            border-radius: 50px;
+        .game-container {
+            background: #1a1c23;
+            padding: 15px;
+            border-radius: 20px;
+            border: 3px solid #ff4d6d;
             display: inline-block;
-            transition: 0.3s;
-            cursor: pointer;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
         }
-
-        .play-button:hover {
-            background-color: #ff758c;
-            transform: scale(1.1);
-            box-shadow: 0 0 30px rgba(255, 77, 109, 0.6);
+        /* This centers the game and makes it look clean */
+        iframe {
+            display: block;
+            margin: 0 auto;
+            border-radius: 10px;
         }
+        .instructions {
+            margin-top: 20px;
+            color: #a0a0a0;
+        }
+        b { color: #ff4d6d; }
     </style>
 </head>
 <body>
 
-    <div class="game-card">
-        <h1>CATCHY FRUIT</h1>
-        <p>Ready to play?</p>
-        
-        <!-- DIRECT LINK: No matter what, this opens your exact URL -->
-        <a href="https://studio.code.org/projects/gamelab/3f5cc020-8362-403f-883e-aebf9a6d4c2f" 
-           class="play-button">
-           PLAY NOW
-        </a>
+    <h1>CATCHY FRUIT</h1>
+
+    <div class="game-container">
+        <!-- YOUR EMBED CODE HERE -->
+        <iframe width="440" height="757" style="border: 0px;" src="https://studio.code.org/projects/gamelab/3f5cc020-8362-403f-883e-aebf9a6d4c2f/embed"></iframe>
+    </div>
+
+    <div class="instructions">
+        <p>Use <b>Arrow Keys</b> to catch the fruit!</p>
+        <p><i>(If it won't move, click inside the game box first)</i></p>
     </div>
 
 </body>
