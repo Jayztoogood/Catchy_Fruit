@@ -1,53 +1,56 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Catchy Fruit Game</title>
+    <meta charset="UTF-8">
+    <title>Catchy Fruit | Play Now</title>
     <style>
+        /* Modern Gaming Layout */
         body {
-            background-color: #1a1a2e; /* Dark blue background */
-            color: white;
+            background-color: #0b0e14;
+            color: #ffffff;
             font-family: 'Segoe UI', sans-serif;
             text-align: center;
-            padding: 40px;
+            padding: 40px 10px;
+            margin: 0;
         }
-        h1 {
-            color: #e94560; /* Pink/Red title */
-            font-size: 3rem;
-            margin-bottom: 20px;
-        }
-        iframe {
-            border: 8px solid #0f3460;
-            border-radius: 15px;
-            box-shadow: 0px 0px 30px rgba(0,0,0,0.7);
-            background-color: white; /* Shows while loading */
-        }
-        .instructions {
-            margin-top: 30px;
-            background: #16213e;
-            padding: 20px;
+        h1 { color: #ff4d6d; font-size: 2.5rem; margin-bottom: 20px; }
+        
+        .game-wrapper {
+            background: #1a1c23;
+            padding: 15px;
+            border-radius: 20px;
+            border: 3px solid #ff4d6d;
             display: inline-block;
-            border-radius: 12px;
-            border: 1px solid #0f3460;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
         }
+
+        /* Your exact iframe code, centered */
+        iframe {
+            display: block;
+            margin: 0 auto;
+            border-radius: 10px;
+            background: #000;
+        }
+
+        .hint { margin-top: 20px; color: #a0a0a0; }
+        b { color: #ff4d6d; }
     </style>
 </head>
 <body>
 
-    <h1>Catchy Fruit!</h1>
+    <h1>CATCHY FRUIT</h1>
 
-    <!-- This is your specific game link -->
-    <iframe 
-        src="https://studio.code.org" 
-        width="400" 
-        height="450" 
-        frameborder="0" 
-        scrolling="no">
-    </iframe>
+    <div class="game-wrapper">
+        <!-- FIXED EMBED CODE -->
+        <iframe width="440" height="757" style="border: 0px;" 
+                src="https://studio.code.org/projects/gamelab/3f5cc020-8362-403f-883e-aebf9a6d4c2f/embed" 
+                allowfullscreen>
+        </iframe>
+    </div>
 
-    <div class="instructions">
-        <h2>How to Play</h2>
-        <p>Use the <b>Arrow Keys</b> to catch the falling fruit!</p>
-        <p>Don't let them hit the ground!</p>
+    <div class="hint">
+        <p>Use <b>Arrow Keys</b> to catch the fruit!</p>
+        <p><i>(If it won't move, click inside the game box first)</i></p>
     </div>
 
 </body>
