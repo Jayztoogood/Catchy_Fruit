@@ -2,20 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Catchy Fruit | Play Now</title>
+    <title>Catchy Fruit | Play Online</title>
     <style>
-        /* Modern Gaming Layout */
+        /* This keeps the dark gaming look you liked */
         body {
             background-color: #0b0e14;
             color: #ffffff;
-            font-family: 'Segoe UI', sans-serif;
+            font-family: 'Segoe UI', Tahoma, sans-serif;
             text-align: center;
-            padding: 40px 10px;
             margin: 0;
+            padding: 20px;
         }
-        h1 { color: #ff4d6d; font-size: 2.5rem; margin-bottom: 20px; }
-        
-        .game-wrapper {
+        h1 { 
+            color: #ff4d6d; 
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        .game-container {
             background: #1a1c23;
             padding: 15px;
             border-radius: 20px;
@@ -23,16 +26,16 @@
             display: inline-block;
             box-shadow: 0 10px 30px rgba(0,0,0,0.5);
         }
-
-        /* Your exact iframe code, centered */
+        /* This centers the game and makes it look clean */
         iframe {
             display: block;
             margin: 0 auto;
             border-radius: 10px;
-            background: #000;
         }
-
-        .hint { margin-top: 20px; color: #a0a0a0; }
+        .instructions {
+            margin-top: 20px;
+            color: #a0a0a0;
+        }
         b { color: #ff4d6d; }
     </style>
 </head>
@@ -40,15 +43,12 @@
 
     <h1>CATCHY FRUIT</h1>
 
-    <div class="game-wrapper">
-        <!-- FIXED EMBED CODE -->
-        <iframe width="440" height="757" style="border: 0px;" 
-                src="https://studio.code.org/projects/gamelab/3f5cc020-8362-403f-883e-aebf9a6d4c2f/embed" 
-                allowfullscreen>
-        </iframe>
+    <div class="game-container">
+        <!-- YOUR EMBED CODE HERE -->
+        <iframe width="440" height="757" style="border: 0px;" src="https://studio.code.org/projects/gamelab/3f5cc020-8362-403f-883e-aebf9a6d4c2f/embed"></iframe>
     </div>
 
-    <div class="hint">
+    <div class="instructions">
         <p>Use <b>Arrow Keys</b> to catch the fruit!</p>
         <p><i>(If it won't move, click inside the game box first)</i></p>
     </div>
