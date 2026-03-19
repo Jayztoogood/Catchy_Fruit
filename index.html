@@ -2,72 +2,128 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Catchy Fruit | Full Screen</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catchy Fruit | Full Screen Gaming</title>
     <style>
-        /* Gaming Dark Mode Theme */
+        /* Modern Dark Gaming Theme */
         body {
             background-color: #0b0e14;
             color: #ffffff;
-            font-family: 'Segoe UI', sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             text-align: center;
             margin: 0;
-            padding: 20px;
-            overflow-x: hidden; /* Prevents side-scrolling when we zoom the game */
+            padding: 40px 10px;
+            overflow-x: hidden;
         }
 
         h1 { 
             color: #ff4d6d; 
-            font-size: 2.5rem;
+            font-size: 3rem;
             margin-bottom: 10px;
             text-transform: uppercase;
+            letter-spacing: 2px;
         }
 
-        /* The Game Container - This centers and zooms the game */
-        .game-scale-wrapper {
+        /* The Game Container (Handles the Zoom and Border) */
+        #game-area {
             display: inline-block;
-            margin-top: 20px;
-            /* CHANGE THIS NUMBER to make it even bigger (like 1.5 or 2.0) */
-            transform: scale(1.4); 
+            margin-top: 30px;
+            padding: 10px;
+            background: #1a1c23;
+            border: 4px solid #ff4d6d;
+            border-radius: 20px;
+            box-shadow: 0 0 50px rgba(255, 77, 109, 0.4);
+            /* Zooming the game to make it look bigger on the page */
+            transform: scale(1.3); 
             transform-origin: top center;
-            border: 2px solid #ff4d6d;
-            border-radius: 10px;
-            background: #000;
-            overflow: hidden;
-            box-shadow: 0 10px 40px rgba(255, 77, 109, 0.3);
+            transition: 0.3s ease;
         }
 
-        /* We set the size to 400x400 to cut off the extra Code.org bars */
+        /* The iFrame (Set to 400x400 to hide extra Code.org UI) */
         iframe {
             width: 400px;
             height: 400px;
             border: none;
+            border-radius: 10px;
+            background: #000;
             display: block;
         }
 
-        .hint {
-            margin-top: 180px; /* Moves text down because the zoom takes up space */
-            color: #a0a0a0;
-            font-size: 1.1rem;
+        /* Full Screen Button Styling */
+        .fs-button {
+            margin-top: 200px; /* Offset for the scaled game box above */
+            background-color: #ff4d6d;
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(255, 77, 109, 0.4);
+            transition: 0.3s;
         }
-        b { color: #ff4d6d; }
+
+        .fs-button:hover {
+            background-color: #ff758c;
+            transform: scale(1.1);
+        }
+
+        /* Styles for when the game IS in Full-Screen mode */
+        #game-area:fullscreen {
+            padding: 0;
+            border: none;
+            background: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transform: scale(1); /* Reset zoom so it doesn't clip in fullscreen */
+            width: 100vw;
+            height: 100vh;
+        }
+
+        #game-area:fullscreen iframe {
+            width: 90vh; /* Scales game based on height in FS */
+            height: 90vh;
+        }
     </style>
 </head>
 <body>
 
     <h1>CATCHY FRUIT</h1>
 
-    <div class="game-scale-wrapper">
-        <!-- The ?nosource hides the 'View Code' button -->
+    <div id="game-area">
+        <!-- ?nosource hides the view code button -->
         <iframe 
+            id="game-iframe"
             src="https://studio.code.org" 
+            allowfullscreen="true"
             scrolling="no">
         </iframe>
     </div>
 
-    <div class="hint">
-        <p>Use <b>Arrow Keys</b> to catch the fruit!<br>
-        <i>Note: You must click the "Run" button to start.</i></p>
+    <div>
+        <button class="fs-button" onclick="goFullscreen()">ENTER FULL SCREEN</button>
     </div>
+
+    <p style="margin-top: 30px; color: #a0a0a0;">
+        Use <b>Arrow Keys</b> to catch the fruit!<br>
+        <i>Note: Press ESC to exit full screen.</i>
+    </p>
+
+    <script>
+        // JavaScript to trigger the browser's Fullscreen mode
+        function goFullscreen() {
+            var elem = document.getElementById("game-area");
+            if (elem.requestFullscreen) {
+                elem.requestFullscreen();
+            } else if (elem.webkitRequestFullscreen) { /* Safari */
+                elem.webkitRequestFullscreen();
+            } else if (elem.msRequestFullscreen) { /* IE11 */
+                elem.msRequestFullscreen();
+            }
+        }
+    </script>
 
 </body>
 </html>
