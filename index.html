@@ -3,67 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catchy Fruit | Play Now</title>
+    <title>Catchy Fruit | My Website</title>
     <style>
+        /* Modern Gaming Theme */
         body {
-            background-color: #1a1a2e;
+            background-color: #0b0e14;
             color: #ffffff;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Segoe UI', Arial, sans-serif;
             text-align: center;
             margin: 0;
-            padding: 50px 20px;
+            padding: 40px 10px;
         }
         h1 {
-            color: #e94560;
-            font-size: 3.5rem;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px #0f3460;
+            color: #ff4d6d;
+            font-size: 3rem;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
         }
-        .game-container {
-            margin: 30px auto;
-            display: inline-block;
-            background: #0f3460;
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .game-card {
+            background: #1a1c23;
             padding: 15px;
             border-radius: 20px;
-            box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.8);
+            border: 2px solid #ff4d6d;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            display: inline-block;
+            margin-top: 20px;
         }
-        /* This ID matches your specific game and allows it to be embedded */
+        /* The iFrame must use /embed at the end to work */
         iframe {
             border: none;
             border-radius: 10px;
-            background-color: #fff;
+            background: #000;
         }
-        .instructions {
-            margin-top: 30px;
-            background: #16213e;
-            padding: 20px;
-            border-radius: 15px;
-            display: inline-block;
-            max-width: 450px;
-            border: 1px solid #e94560;
+        .controls {
+            margin-top: 25px;
+            background: #252833;
+            padding: 15px;
+            border-radius: 12px;
+            font-size: 1.1rem;
         }
-        b { color: #e94560; }
+        b { color: #ff4d6d; }
     </style>
 </head>
 <body>
 
-    <h1>CATCHY FRUIT</h1>
-    <p>Catch the fruit before it hits the ground!</p>
+    <div class="container">
+        <h1>Catchy Fruit</h1>
+        <p>Don't let the fruit hit the ground!</p>
 
-    <div class="game-container">
-        <!-- FIXED EMBED LINK BELOW -->
-        <iframe 
-            src="https://studio.code.org" 
-            width="400" 
-            height="450" 
-            scrolling="no" 
-            allowfullscreen>
-        </iframe>
-    </div>
+        <div class="game-card">
+            <!-- FIXED LINK: Added /embed and sandbox permissions -->
+            <iframe 
+                src="https://studio.code.org" 
+                width="400" 
+                height="450" 
+                scrolling="no" 
+                allow="autoplay; fullscreen"
+                sandbox="allow-forms allow-popups allow-scripts allow-same-origin">
+            </iframe>
+        </div>
 
-    <div class="instructions">
-        <h3>How to Play</h3>
-        <p>Use your <b>Arrow Keys</b> to move. If the game doesn't respond, click inside the game box first!</p>
+        <div class="controls">
+            <p>Use <b>Arrow Keys</b> to move.<br>
+            <i>Note: If it won't move, click the game box first!</i></p>
+        </div>
     </div>
 
 </body>
