@@ -2,12 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Catchy Fruit | Game Launcher</title>
+    <title>Catchy Fruit | Play Now</title>
     <style>
+        /* This keeps the cool gaming look you liked */
         body {
             background-color: #0b0e14;
             color: #ffffff;
-            font-family: 'Segoe UI', sans-serif;
+            font-family: 'Segoe UI', Tahoma, sans-serif;
             text-align: center;
             padding: 100px 20px;
             margin: 0;
@@ -25,7 +26,6 @@
             font-size: 3.5rem; 
             margin: 0;
             text-transform: uppercase;
-            letter-spacing: 3px;
         }
         p { 
             font-size: 1.2rem; 
@@ -33,17 +33,18 @@
             margin-bottom: 40px; 
         }
         
+        /* The PLAY NOW Button */
         .play-button {
             background-color: #ff4d6d;
             color: white;
             padding: 22px 60px;
             font-size: 1.8rem;
             font-weight: bold;
-            text-decoration: none;
+            text-decoration: none; /* Removes the underline */
             border-radius: 50px;
-            transition: all 0.3s ease;
             display: inline-block;
-            box-shadow: 0 5px 20px rgba(255, 77, 109, 0.4);
+            transition: 0.3s;
+            cursor: pointer;
         }
 
         .play-button:hover {
@@ -59,9 +60,8 @@
         <h1>CATCHY FRUIT</h1>
         <p>Ready to play?</p>
         
-        <!-- FIXED LINK: Using /embed instead of /view to bypass the dashboard -->
-        <a href="https://studio.code.org/projects/gamelab/3f5cc020-8362-403f-883e-aebf9a6d4c2f/embed" 
-           target="_blank" 
+        <!-- DIRECT LINK: No matter what, this opens your exact URL -->
+        <a href="https://studio.code.org/projects/gamelab/3f5cc020-8362-403f-883e-aebf9a6d4c2f" 
            class="play-button">
            PLAY NOW
         </a>
