@@ -2,27 +2,53 @@
 <html>
 <head>
     <title>Catchy Fruit Game</title>
-    <!-- This links to your CSS for styling -->
-    <link rel="stylesheet" href="style.css"> 
+    <style>
+        body {
+            background-color: #1a1a2e; /* Dark blue background */
+            color: white;
+            font-family: 'Segoe UI', sans-serif;
+            text-align: center;
+            padding: 40px;
+        }
+        h1 {
+            color: #e94560; /* Pink/Red title */
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        iframe {
+            border: 8px solid #0f3460;
+            border-radius: 15px;
+            box-shadow: 0px 0px 30px rgba(0,0,0,0.7);
+            background-color: white; /* Shows while loading */
+        }
+        .instructions {
+            margin-top: 30px;
+            background: #16213e;
+            padding: 20px;
+            display: inline-block;
+            border-radius: 12px;
+            border: 1px solid #0f3460;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Catchy Fruit!</h1>
-        <p>Catch as much fruit as you can before time runs out.</p>
-    </header>
 
-    <div id="game-wrapper">
-        <!-- This is where your original game code lives -->
-        <script src="lib/p5.js"></script>
-        <script src="code.js"></script>
+    <h1>Catchy Fruit!</h1>
+
+    <!-- This is your specific game link -->
+    <iframe 
+        src="https://studio.code.org" 
+        width="400" 
+        height="450" 
+        frameborder="0" 
+        scrolling="no">
+    </iframe>
+
+    <div class="instructions">
+        <h2>How to Play</h2>
+        <p>Use the <b>Arrow Keys</b> to catch the falling fruit!</p>
+        <p>Don't let them hit the ground!</p>
     </div>
 
-    <section id="how-to-play">
-        <h2>How to Play</h2>
-        <ul>
-            <li>Use the <b>Arrow Keys</b> to move.</li>
-            <li>Catch the falling fruit for points!</li>
-        </ul>
-    </section>
 </body>
 </html>
