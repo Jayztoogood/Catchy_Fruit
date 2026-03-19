@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Catchy Fruit | Play On Site</title>
+    <title>Catchy Fruit | Play Now</title>
     <style>
         /* Gaming Dark Mode Theme */
         body {
@@ -10,14 +10,12 @@
             color: #ffffff;
             font-family: 'Segoe UI', sans-serif;
             text-align: center;
-            margin: 0;
             padding: 40px 10px;
         }
 
         h1 { color: #ff4d6d; font-size: 2.5rem; margin-bottom: 20px; }
 
-        /* Container that holds and centers your game */
-        .game-frame-container {
+        .game-container {
             background: #1a1c23;
             padding: 15px;
             border-radius: 20px;
@@ -26,16 +24,15 @@
             box-shadow: 0 10px 30px rgba(0,0,0,0.5);
         }
 
-        /* This is the window showing your game */
+        /* Centering the game and setting size */
         iframe {
             display: block;
             margin: 0 auto;
-            border: none;
             border-radius: 10px;
             background: #000;
         }
 
-        .controls-hint { margin-top: 20px; color: #a0a0a0; }
+        .instructions { margin-top: 20px; color: #a0a0a0; }
         b { color: #ff4d6d; }
     </style>
 </head>
@@ -43,20 +40,18 @@
 
     <h1>CATCHY FRUIT</h1>
 
-    <div class="game-frame-container">
-        <!-- THE FIXED EMBED LINK -->
-        <iframe 
-            width="440" 
-            height="757" 
-            src="https://studio.code.org" 
-            scrolling="no" 
-            allowfullscreen>
+    <div class="game-container">
+        <!-- FIXED EMBED CODE -->
+        <iframe width="440" height="757" style="border: 0px;" 
+                src="https://studio.code.org" 
+                scrolling="no" 
+                allowfullscreen>
         </iframe>
     </div>
 
-    <div class="controls-hint">
+    <div class="instructions">
         <p>Use <b>Arrow Keys</b> to catch the fruit!</p>
-        <p><i>Click inside the game box if it doesn't move.</i></p>
+        <p><i>(If it won't move, click inside the game box first)</i></p>
     </div>
 
 </body>
