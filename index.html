@@ -2,39 +2,52 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Catchy Fruit | Play Online</title>
+    <title>Catchy Fruit | Full Screen</title>
     <style>
-        /* This keeps the dark gaming look you liked */
+        /* Gaming Dark Mode Theme */
         body {
             background-color: #0b0e14;
             color: #ffffff;
-            font-family: 'Segoe UI', Tahoma, sans-serif;
+            font-family: 'Segoe UI', sans-serif;
             text-align: center;
             margin: 0;
             padding: 20px;
+            overflow-x: hidden; /* Prevents side-scrolling when we zoom the game */
         }
+
         h1 { 
             color: #ff4d6d; 
             font-size: 2.5rem;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
         }
-        .game-container {
-            background: #1a1c23;
-            padding: 15px;
-            border-radius: 20px;
-            border: 3px solid #ff4d6d;
+
+        /* The Game Container - This centers and zooms the game */
+        .game-scale-wrapper {
             display: inline-block;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-        }
-        /* This centers the game and makes it look clean */
-        iframe {
-            display: block;
-            margin: 0 auto;
-            border-radius: 10px;
-        }
-        .instructions {
             margin-top: 20px;
+            /* CHANGE THIS NUMBER to make it even bigger (like 1.5 or 2.0) */
+            transform: scale(1.4); 
+            transform-origin: top center;
+            border: 2px solid #ff4d6d;
+            border-radius: 10px;
+            background: #000;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(255, 77, 109, 0.3);
+        }
+
+        /* We set the size to 400x400 to cut off the extra Code.org bars */
+        iframe {
+            width: 400px;
+            height: 400px;
+            border: none;
+            display: block;
+        }
+
+        .hint {
+            margin-top: 180px; /* Moves text down because the zoom takes up space */
             color: #a0a0a0;
+            font-size: 1.1rem;
         }
         b { color: #ff4d6d; }
     </style>
@@ -43,14 +56,17 @@
 
     <h1>CATCHY FRUIT</h1>
 
-    <div class="game-container">
-        <!-- YOUR EMBED CODE HERE -->
-        <iframe width="440" height="757" style="border: 0px;" src="https://studio.code.org/projects/gamelab/3f5cc020-8362-403f-883e-aebf9a6d4c2f/embed"></iframe>
+    <div class="game-scale-wrapper">
+        <!-- The ?nosource hides the 'View Code' button -->
+        <iframe 
+            src="https://studio.code.org" 
+            scrolling="no">
+        </iframe>
     </div>
 
-    <div class="instructions">
-        <p>Use <b>Arrow Keys</b> to catch the fruit!</p>
-        <p><i>(If it won't move, click inside the game box first)</i></p>
+    <div class="hint">
+        <p>Use <b>Arrow Keys</b> to catch the fruit!<br>
+        <i>Note: You must click the "Run" button to start.</i></p>
     </div>
 
 </body>
